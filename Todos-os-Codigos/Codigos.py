@@ -63,6 +63,17 @@ print(type(inteiro))
 
 Variavel:int=input("Digite um Numero: ")
 
+# ou
+
+Var = float(input("Escreva um numero: "))
+
+#--------------------------------------------- Operações dentro do print -------------------------------------------
+
+print(50*"Olá")
+
+Juninho="Olá Pessoas"
+print(Juninho*2)
+
 #---------------------------------------------------- Variaveis ----------------------------------------------------
 
 # Inteira - Números inteiros
@@ -83,14 +94,61 @@ Num_quebrado=14.2566
 # Verdadeiro ou falso - bool
 # Sera Verdadeiro ou falso dependendo se tem valor atribuido a ele, se tiver texto ou numero ele sera verdadeiro
 
-sera:bool
-sera="1567856897"
+
+sera=(bool(input("Digite ou não Digite: ").replace("Não","")))
 print(sera)
 
 # Vai dar verdadeiro
 
+'''
+Substituição de variavel
+'''
+palavra:str="153"
+
+palavra = int(palavra)
+
+print(palavra+10/2)
+
+# Substituição de Caracteres
+# Ultilizando o .replace() você substitui o primeiro caracter dentro dele pelo o segundo 
+
+peso = float(input('digite o seu peso: '.replace(",",".")))
+
+# Caixa alta ou caixa baixa
+
+Tab=(input("Qual o seu nome: ").upper()) #caixa Alta
+print(Tab)
+
+Tab=(input("Qual o seu nome: ").lower()) #caixa Baixa
+print(Tab)
+
+#-------------------------------- laço de repetição --------------------------------
+
+#declaração de variavel
 
 
+#loop
+def Loop():
+    numero:int=100
+    while numero >= 0:
+        print(numero*"*")
+        numero -= 1
 
 
+#Break - Quebra o loop mesmo que as condições estejam sendo atendidas
+def Break():
+    cont = 0
+    while cont < 15:
+        cont+= 1
+        if cont % 2 == 0:
+            print(cont)
+        elif cont >=7:
+            break
+        else:
+            continue
 
+# Laços com FOR 
+
+nome="Gomes"
+for i in nome:
+    print(i.replace(i,"*"))
