@@ -94,6 +94,7 @@ def Login3():
     senha3=(input("Digite a Senha: "))
     return senha3
 
+
 def sistema_de_Login():
     erro:int=1
     print(20*"-", 'Bem Vindo ao Sistema de Registro',20*"-" )
@@ -101,25 +102,26 @@ def sistema_de_Login():
         erro = 0
         user=(str(input("Qual nome de usuario: ")))
         while user == "":
-            print(30*"*","Digite um Nome Válido",30*"*")
-            erro = 1 
-            break
-        
-        Senhas()       
-        print(30*"-","informações Pessoais",30*"-","\n")
-        dt=(input('Qual a sua data de nascimento: '))
-        nome=(input('Digite o seu Nome completo: '))
-        email=(input('Digite o seu Email: '))
-        print()
-        print(50*"*",'Reiniciando o Sistema',50*"*")
-        print()
-        print(40*"-","Login",40*"-")
-        print()
-        print(30*"_","Bem Vindo ao Sistema de Login",30*"_")
-        Login2()
-        Login3()
-        while (Login3 != user) or (Senhas != Login2): 
-            print("Usuario ou senha incorreto")
+            if user == "":
+                print(30*"*","Digite um Nome Válido",30*"*")
+                erro = 1 
+                break
+        else:        
+            Senhas()       
+            print(30*"-","informações Pessoais",30*"-","\n")
+            dt=(input('Qual a sua data de nascimento: '))
+            nome=(input('Digite o seu Nome completo: '))
+            email=(input('Digite o seu Email: '))
+            print()
+            print(50*"*",'Reiniciando o Sistema',50*"*")
+            print()
+            print(40*"-","Login",40*"-")
+            print()
+            print(30*"_","Bem Vindo ao Sistema de Login",30*"_")
+            Login2()
+            Login3()
+            while (Login3 != user) or (Senhas != Login2): 
+                print("Usuario ou senha incorreto")
             def Login2():
                 user1=(input("Digite o nome do Usuario: "))
                 senha3=(input("Digite a Senha: "))
@@ -127,8 +129,8 @@ def sistema_de_Login():
 
                                                                            
                 
-        print(f"Bem Vindo {nome}")
-        print(f"Data de Nascimento: {dt}")
-        print(f"Email: {email}")
+            print(f"Bem Vindo {nome}")
+            print(f"Data de Nascimento: {dt}")
+            print(f"Email: {email}")
 
 sistema_de_Login()
