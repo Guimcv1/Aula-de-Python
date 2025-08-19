@@ -49,4 +49,9 @@ def sistema_de_Login():
             print(f"Data de Nascimento: {dt}")
             print(f"Email: {email}")
 
-sistema_de_Login()
+def s():
+    verific=input("Deseja imprimir o seu tiket?\n ")
+    verific.upper
+    print(verific)
+
+s()

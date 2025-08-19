@@ -3,7 +3,6 @@ print()
 print(40*"-", "Bem vindo",40*"-")
 print()
 Idade=int(input("Digite a sua idade: "))
-print(type (Idade))
 cont = 1
 erro = 1
 while erro == 1:
@@ -19,6 +18,11 @@ while erro == 1:
     print("6 | Interestelar","\n")
     filme=int(input("Selecione um filme: "))
     erro = 1
+    tipo=(input("Filme 3D (SIM/NÃO)\n").upper())
+    if tipo == "SIM":
+        valor = 40.0
+    else:
+        valor = 22.0
     if filme <= 2 and Idade < 18 or filme > 6:
         while filme <= 2 and Idade < 18 or filme > 6:
             erro = 1
@@ -28,7 +32,7 @@ while erro == 1:
                 break
             else:
                 if filme <= 2 and Idade < 18:
-                    print("Filme Inapropriado para a idade, selecione outro filme")
+                    print("Filme Inapropriado para a idade, selecione outro filme\n")
                     erro = 1  
                     break
                 else:
@@ -60,7 +64,7 @@ while erro == 1:
                     erro = 0
                     break
 
-verific=(input("Deseja imprimir o seu tiket?\n0 ")).upper
+verific=(input("Deseja imprimir o seu tiket?\n").upper())
 if filme == 1:
     filme = str("Corra que  a policia vem ai")
 elif filme == 2:
@@ -75,18 +79,15 @@ elif filme == 6:
     filme = str("Interestelar")
 
 if verific == "SIM":
-    print(80*"-","Tiket",80*"-")
-    print("Cinema Sorocaba")
-    print()
-    print(f"Filme: {filme}")
-    print(f"Sala: {sala}")
+    print(30*"/","Tiket",30*"/")
+    print("|","Cinema Sorocaba", 48*"_", "|")
+    print(f"| Filme: {filme}", 44*"_", "|")
+    print(f"| Sala: {sala}", 56*"_", "|")
+    print(f"| Filme 3D: {tipo}", 53*"_", "|")
+    print("|",64*" ","|")
+    print("| Valor: R$", valor,49*"_","|")
+    print(66*"/")
 else:
-    ...
-
-  
-
-
-                   
-
-
-
+    s=input("Deseja cancelar a compra?\n")
+    if s == "sim":
+        print(48*"-", " Operação Cancelada ", 48*"-")
