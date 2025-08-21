@@ -40,6 +40,53 @@ def Atividade1():
                     print(f'{nome} nome não encontrado.')
                     print(lista)
                     time.sleep(1)
-                
-            
-Atividade1()
+def Atividade2():
+    import time
+    from os import system as console
+    lista=[]
+    print(30*'-','Bem vindo ao oirganizador',30*'-')
+    while True:
+        numero=str(input('Digite o Numero:\n').replace(',','.'))
+        console('cls')
+        if numero == '':
+            decisao=input('Deseje imprimir a lista numerica organinzada?\n').upper().replace('SIM', '').replace('S','')
+            print(decisao)
+            decisao = bool(decisao)
+            print(type(decisao))
+            console('cls')
+            if decisao == False:
+                lista.sort()
+                print(lista)
+                d=input('Deseja adicionar mais numeros?\n').upper().replace('SIM','').replace('S','')
+                d = bool(d)
+                if d == False:
+                    continue
+                else:
+                    break
+            else:
+                continue
+        else:
+            numero = float(numero)
+            lista.append(numero)
+            numero = str(numero)
+            continue
+def Atividade3():
+    import time
+    from os import system as console
+    print(30*'-','Bem vindo ao calculador de média',30*'-')
+    lista = []
+    vez = 0
+    while True:
+        console('cls')
+        nota = input('Digite a Nota: ')
+        lista.append(nota)
+        vez += 1
+        if nota == '':
+            lista = int(lista)
+            result = (lista/vez)
+            print('A média da sua nota é: ',result)
+        else:
+            continue
+        
+    
+Atividade3()
