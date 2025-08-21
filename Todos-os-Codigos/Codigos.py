@@ -153,3 +153,27 @@ nome="Gomes"
 for i in nome:
     print(i.replace(i,"*"))
 
+#----------------------------------------------------- Bibliotecas-------------------------------------------------------
+
+# *********** Importar Bibliotecas
+
+import os                           # Deve -se colocar import Nome_da_Biblioteca
+from os import system               # Usa-se o from para importar algo especifico de alguma biblioteca sem importar ela inteira
+from os import system as console    # Usa-se o as para substittuir o nome do objeto de importação
+
+# ********** Principais Bibliotecas
+
+system                              #importa funçoes de console no código mais usado para debug
+                                                         
+
+
+#--------------------------------------------------------Listas-------------------------------------------------------------
+
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------------
+
+
+
