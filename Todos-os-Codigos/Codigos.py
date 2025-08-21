@@ -178,6 +178,7 @@ from import as      # importa algo especifico da biblioteca e modifica o nome de
 import time         # funções de tempo
 import random       # importa funções de aleatoriedade
 import os           # importa funções de controle do console e do sistema
+import json         # importa funções de chaves de acesso com valores dentro como lista
 
 # time
 
@@ -208,7 +209,10 @@ os.mkdir()                      # Cria um novo diretorio
 os.rmdir()                      # Remove um diretorio vazio
 EncodingWarning
 
+# json
 
+# Pode se usar o nome: gui --> chave : porta que a chave abre
+# 
 
 #------------------------------ Lista ------------------------------
 
@@ -223,5 +227,17 @@ lista.reverse                         # Ele inverte os dados da lista
 lista.sort                            # Ele organiza a lista (Alfabeticamente, numericamente, ...)
 lista
 
+# -------------------------------------------------- Swicht Case ----------------------------------------------------
+
+input('Digite um nome')
+match nome:
+    case 'joao':
+        print('joaozinho')
+    case 'cleber':
+        print('clebinho')
+    case _:                                         # Usa-se o _: para ele usar caso nenhuma das opções anteriores forem validas
+        print('nome sem zinho')
 
 
+
+# --------------------------------------------------------------------------------------------------------------------
