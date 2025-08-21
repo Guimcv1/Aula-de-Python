@@ -153,7 +153,7 @@ nome="Gomes"
 for i in nome:
     print(i.replace(i,"*"))
 
-<<<<<<< HEAD
+
 #----------------------------------------------------- Bibliotecas-------------------------------------------------------
 
 # *********** Importar Bibliotecas
@@ -176,7 +176,7 @@ system                              #importa funçoes de console no código mais
 
 #----------------------------------------------------------------------------------------------------------------------
 
-=======
+
 #------------------------------- Biblioteca ----------------
 
 import              # importa uma biblioteca 
@@ -222,16 +222,16 @@ EncodingWarning
 
 #------------------------------ Lista ------------------------------
 
-lista = [1,2,3,4,5,6,7,8,9,10]       # Definir o nome da lista e os intens que tem dentro dela
-print(lista)                         # Imprimir os inntens da lista
-print(random.choices(lista, k=3))    # Imprime k=3 nome aleatorio da lista 
-lista.append(11)                     # adiciona um objeto na lista na ultima possição Ex: 11
+lista = [1,2,3,4,5,6,7,8,9,10]        # Definir o nome da lista e os intens que tem dentro dela
+print(lista)                          # Imprimir os inntens da lista
+print(random.choices(lista, k=3))     # Imprime k=3 nome aleatorio da lista 
+lista.append(11)                      # adiciona um objeto na lista na ultima possição Ex: 11
 lista.copy                            # Ele copia uma lista
 lista.pop                             # Recorta o objeto (copia e deleta da lista)
 lista.remove                          # Ele remove um objeto da lista
 lista.reverse                         # Ele inverte os dados da lista 
 lista.sort                            # Ele organiza a lista (Alfabeticamente, numericamente, ...)
 lista
->>>>>>> 14f65a579dacb169ab9d5ce0820a16f5ef3b3388
+
 
 
