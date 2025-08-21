@@ -165,16 +165,6 @@ from os import system as console    # Usa-se o as para substittuir o nome do obj
 # ********** Principais Bibliotecas
 
 system                              #importa funçoes de console no código mais usado para debug
-                                                         
-
-
-#--------------------------------------------------------Listas-------------------------------------------------------------
-
-
-
-
-
-#----------------------------------------------------------------------------------------------------------------------
 
 
 #------------------------------- Biblioteca ----------------

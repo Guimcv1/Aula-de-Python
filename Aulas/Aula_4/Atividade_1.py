@@ -75,16 +75,26 @@ def Atividade3():
     from os import system as console
     print(30*'-','Bem vindo ao calculador de média',30*'-')
     lista = []
-    vez = 0
+    vez = -1
     while True:
         console('cls')
         nota = input('Digite a Nota: ')
         lista.append(nota)
         vez += 1
         if nota == '':
-            lista = int(lista)
-            result = (lista/vez)
+            lista.pop()
+            lista_t =[]
+            for x in lista:
+                lista_t.append(int(x))
+            print(lista_t)
+            result = (sum(lista_t)/vez)
             print('A média da sua nota é: ',result)
+            if result >= 7:
+                print('Você passou de Ano')
+                input('')
+            else:
+                print("Você reprovou de Ano")
+                input('')
         else:
             continue
         
