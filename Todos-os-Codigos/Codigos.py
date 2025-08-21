@@ -153,6 +153,7 @@ nome="Gomes"
 for i in nome:
     print(i.replace(i,"*"))
 
+<<<<<<< HEAD
 #----------------------------------------------------- Bibliotecas-------------------------------------------------------
 
 # *********** Importar Bibliotecas
@@ -175,5 +176,62 @@ system                              #importa funçoes de console no código mais
 
 #----------------------------------------------------------------------------------------------------------------------
 
+=======
+#------------------------------- Biblioteca ----------------
+
+import              # importa uma biblioteca 
+from import         # importa algo especifico da biblioteca
+from import as      # importa algo especifico da biblioteca e modifica o nome dela
+
+# principais bibliotecas e funções
+
+import time         # funções de tempo
+import random       # importa funções de aleatoriedade
+import os           # importa funções de controle do console e do sistema
+
+# time
+
+time.sleep(5)       # define o tempo para finalizar o programa a partir dela
+time.perf_counter() # Usado para ver quanto tempo o comando usa do inicio até o final
+
+# random
+lista = []
+random.randint(1,100,10)                                # Ele vai gerar um numero de 1 á 100 e vai pular de 10 em 10
+random.uniform(2.4,5.9)                                 # Gera um ponto uniforme entre eles
+random.choice('banana', 'abacaxi', 'maça')              # Sorteia um nome dentro dele
+random.choices(['banana', 'abacaxi', 'maça'], k=3)      # Sorteia um nome dentro dele com uma quantidade de uma vez k=
+random.sample(range(1, 10), 3)                          # sorteia k numeros dentro de um paremetro EX: entre 1 á 10 k=3 (2,5,4)
+random.shuffle(lista)                                   # Embaralha uma lista
+random.randrange(1, 10, 2)                              # Sorteia numeros dentro dos paremetron
+
+# os
+
+os.getcwd()                     # Retorna o diretório de trabalho atual
+os.chdir()                      # Altera o diretório de trabalho
+os.listdir()                    # Lista os arquivos e pastas em um diretório
+os.remove()                     # Remove um arquivo
+os.rename('antigo', 'novo')     # Renomeia ou move um arquivo
+os.path.exists()                # Verifica se um caminho existe
+os.name                         # Retorna o nome do sistema operacional
+os.system                       # Execulta comando dieretamente no terminal
+os.mkdir()                      # Cria um novo diretorio
+os.rmdir()                      # Remove um diretorio vazio
+EncodingWarning
+
+
+
+#------------------------------ Lista ------------------------------
+
+lista = [1,2,3,4,5,6,7,8,9,10]       # Definir o nome da lista e os intens que tem dentro dela
+print(lista)                         # Imprimir os inntens da lista
+print(random.choices(lista, k=3))    # Imprime k=3 nome aleatorio da lista 
+lista.append(11)                     # adiciona um objeto na lista na ultima possição Ex: 11
+lista.copy                            # Ele copia uma lista
+lista.pop                             # Recorta o objeto (copia e deleta da lista)
+lista.remove                          # Ele remove um objeto da lista
+lista.reverse                         # Ele inverte os dados da lista 
+lista.sort                            # Ele organiza a lista (Alfabeticamente, numericamente, ...)
+lista
+>>>>>>> 14f65a579dacb169ab9d5ce0820a16f5ef3b3388
 
 
