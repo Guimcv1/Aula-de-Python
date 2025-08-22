@@ -95,7 +95,7 @@ Num_quebrado=14.2566
 # Sera Verdadeiro ou falso dependendo se tem valor atribuido a ele, se tiver texto ou numero ele sera verdadeiro
 
 
-sera=(bool(input("Digite ou não Digite: ").replace("Não","")))
+sera=bool(input("Digite ou não Digite: ").replace("Não",""))
 print(sera)
 
 # Vai dar verdadeiro
@@ -114,7 +114,7 @@ print(palavra+10/2)
 
 peso = float(input('digite o seu peso: '.replace(",",".")))
 
-# Caixa alta ou caixa baixa
+# Caixa alta ou caixa baixa e remoção de espaços 
 
 Tab=(input("Qual o seu nome: ").upper()) #caixa Alta
 print(Tab)
@@ -122,10 +122,24 @@ print(Tab)
 Tab=(input("Qual o seu nome: ").lower()) #caixa Baixa
 print(Tab)
 
-#-------------------------------- laço de repetição --------------------------------
+Tab=(input("Qual o seu nome: ").strip()) #Remove os espaços a mais
+print(Tab)
+
+#------------------------------------- if e else -------------------------------------
+
+if 10 > 5:  # Se 10 for maior que 5
+    print("10 é maior que 5")  # Imprime se a condição for verdadeira
+else:  # Se a condição for falsa
+    print("10 não é maior que 5")  # Imprime se a condição for
+# falsa
+
+print('compriu a condição') if 10 > 5 else print('não cumpriu a condição')  # Usando o operador ternário
+
+
+
+#------------------------------------ laço de repetição --------------------------------------
 
 #declaração de variavel
-
 
 #loop
 def Loop():
@@ -133,7 +147,6 @@ def Loop():
     while numero >= 0:
         print(numero*"*")
         numero -= 1
-
 
 #Break - Quebra o loop mesmo que as condições estejam sendo atendidas
 def Break():
@@ -147,10 +160,24 @@ def Break():
         else:
             continue
 
+# Verificaçao de operadores
+
+def ver():
+    while True:
+        prosseguir = input("Deseja continuar? (s/n): ").strip().lower()
+        if prosseguir == 's' or prosseguir == 'n':
+            break
+        else:
+            print("Opção inválida.")
+    match prosseguir:
+        case 'n':
+            break
+
+
 # Laços com FOR 
 
-nome="Gomes"
-for i in nome:
+nome = "Gomes"
+for i in nome:                      # 'for' define o nome da variavel que vai ficar dentro dela; e 'in' pega os valores
     print(i.replace(i,"*"))
 
 
@@ -209,10 +236,26 @@ os.mkdir()                      # Cria um novo diretorio
 os.rmdir()                      # Remove um diretorio vazio
 EncodingWarning
 
+# OS - gerenciamento de arquivos
+
+def Manager():
+    with open(fr'Diretorio/{nome_do_arquivo}.tipo de arquivo (.txt;.json;.pdf)', 'tipo de operação CRUD (w,c,r)', enconding='utf-8') as f:
+
+                                                            # encodint 'utf-8' refere-se ao layout de texto, tipo abnt2; e o 'as f:' refere-se ao nome dado a toda a operação
+        f.write('Texto que deseja escrever no arquivo')     # 'w' escreve no arquivo, 'r' lê o arquivo, 'a' adiciona ao final do arquivo
+        f.read()                                            # Lê o arquivo
+        f.close()                                           # Fecha o arquivo após a operação
+
+        
+
+
 # json
 
 # Pode se usar o nome: gui --> chave : porta que a chave abre
 # 
+with open(f'{arquivo}.json', 'r', encoding="utf-8") as f:
+            dados = json.load(f)
+print(f"{dados['nome']} - {dados['idade']} anos")     #  Imprime o nome e a idade de cada dado no arquivo JSON
 
 #------------------------------ Lista ------------------------------
 
@@ -229,7 +272,7 @@ lista
 
 # -------------------------------------------------- Swicht Case ----------------------------------------------------
 
-input('Digite um nome')
+nome = input('Digite um nome')
 match nome:
     case 'joao':
         print('joaozinho')
@@ -240,4 +283,9 @@ match nome:
 
 
 
-# --------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------- Verificação de erro ----------------------------------------------------
+try:
+    print()
+except Exception as e:                                      # A função Exception relata o erro ocorrido no codigo
+            print(f"Erro ao gravar o arquivo: {e}")
+            

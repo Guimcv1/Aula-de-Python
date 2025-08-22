@@ -130,8 +130,8 @@ def Atividade5():
             os.system('cls' if os.name == 'nt' else 'clear')
             print('Gravado com sucesso.')
 
-            with open(f'{nome_arquivo}.txt', 'r', encoding='uft-8') as f:
-                texto_final = f.read()                                      # Fazer a leitura do arquivo que etá dnetro de f
+            with open(fr'C:\Users\guimc\OneDrive\Documentos\Python\Aulas\Aula-de-Python\Aula-de-Python\Aulas\Aula_5/{nome_arquivo}.txt', 'r', encoding='uft-8') as f:
+                texto_final = f.read(f)                                      # Fazer a leitura do arquivo que está dentro de f
             print(f'Texto final: {texto_final}')
 
             while True:
@@ -158,12 +158,12 @@ def Atividade6():
     try:
         arquivo = input('Digite o nome do arquivo: ').strip().lower()
         with open(f'{arquivo}.json', 'r', encoding="utf-8") as f:
-            dados = json.load(f)                                             # .load - para ler um arquivo json
+            dados = json.load(f)                                            # .load - para ler um arquivo json
         print(f'{'-'*20} DADOS {'-'*20}\n')
         for dado in dados:
             for chave in dado:
-                print(f'{chave.captalize} : {dado.get(chave)}')             # .captalize - Serve para capturar a chave de um arquivo . json
-            print(f'{chave.captalize()} : {dado.get(chave)}')
+                print(f'{chave.capitalize()} : {dado.get(chave)}')          # .captalize - Serve para capturar a chave de um arquivo . json | coloca a primeira letra como maiuscula
+            print(f'{chave.capitalize()} : {dado.get(chave)}')              # .get - Pega os itens dentro da chave 
             print(40*'-')
     except Exception as e:
         print(f'Não foi possivel ler o arquivo. Erro {e}')
