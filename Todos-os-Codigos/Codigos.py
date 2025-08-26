@@ -268,7 +268,13 @@ lista.pop                             # Recorta o objeto (copia e deleta da list
 lista.remove                          # Ele remove um objeto da lista
 lista.reverse                         # Ele inverte os dados da lista 
 lista.sort                            # Ele organiza a lista (Alfabeticamente, numericamente, ...)
-lista
+lista.insert                          # Insere um valor em uma possição especifica na lista
+
+# ----------------------------------------------------- Json --------------------------------------------------------
+
+
+
+
 
 # -------------------------------------------------- Swicht Case ----------------------------------------------------
 
@@ -288,4 +294,9 @@ try:
     print()
 except Exception as e:                                      # A função Exception relata o erro ocorrido no codigo
             print(f"Erro ao gravar o arquivo: {e}")
-            
+
+# -------------------------------------------------- lambda ----------------------------------------------------
+
+# função de Linha porsso dar o valor de uma linha
+
+limpar = lambda: os.system('cls' if os.name == 'nt' else 'clear')

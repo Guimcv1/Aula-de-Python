@@ -23,6 +23,7 @@ def Calculadora_d_gasolina():
 #================================================ Crud ==========================================
 # Mainpulação de Arquivos 
 # Leitura de arquivos
+
 def crud():
     with open('texto.txt', 'r', encoding='utf-8') as file:     # with open - abre um aquivo | ('texto.txt') - fala qual é o arquivo a ser aberto | 'r' fala qual a função 
         texto = file.read()
@@ -190,9 +191,9 @@ def adicao():
         with open(fr'Aulas/Aula_5/Banco.json', 'r') as Leitura:
             banco = dict(json.load(Leitura))
         nome = input('Digite o nome que deseja adicionar: ')
-        banco["Nomes"].append(nome)                         # Nome do json [nome da key] .append(nome a ser adicionado "Apenas se for uam lista") 
+        banco["Nomes"].append(nome)                                 # Nome do json [nome da key] .append(nome a ser adicionado "Apenas se for uam lista") 
         with open(fr'Aulas/Aula_5/Banco.json', 'w') as adicao:
-            adicao = json.dump(banco, adicao, indent=2)     # dump(nome a ser adicionado, banco a ser adicionado, e tabeamento)
+            adicao = json.dump(banco, adicao, indent=2)             # dump(nome a ser adicionado, banco a ser adicionado, e tabeamento)
 
     except Exception as erro:
         print(erro)
