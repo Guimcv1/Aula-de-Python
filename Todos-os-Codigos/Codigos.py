@@ -288,4 +288,5 @@ try:
     print()
 except Exception as e:                                      # A função Exception relata o erro ocorrido no codigo
             print(f"Erro ao gravar o arquivo: {e}")
-            
+
+
