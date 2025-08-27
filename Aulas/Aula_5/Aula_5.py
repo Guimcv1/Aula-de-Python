@@ -23,6 +23,7 @@ def Calculadora_d_gasolina():
 #================================================ Crud ==========================================
 # Mainpulação de Arquivos 
 # Leitura de arquivos
+
 def crud():
     with open('texto.txt', 'r', encoding='utf-8') as file:     # with open - abre um aquivo | ('texto.txt') - fala qual é o arquivo a ser aberto | 'r' fala qual a função 
         texto = file.read()
@@ -54,8 +55,6 @@ def teste1():
         except Exception as e:
             print(f'Não foi possivel ler o arquivo. Erro {e}')
             continue
-
-
 
 def Atividade3():
     import os
@@ -117,7 +116,6 @@ def Atividade4():
             print(f"Erro ao gravar o arquivo: {e}")
             continue
 
-
 def Atividade5():
     import os
     while True:
@@ -168,5 +166,35 @@ def Atividade6():
     except Exception as e:
         print(f'Não foi possivel ler o arquivo. Erro {e}')
 
-Atividade6()
-        
+def dev():
+    import json
+    with open(fr"Aulas/Aula_5/texto.json", "r", encoding="utg-8") as js:
+        a = dict(json.load(js))
+    
+def test():
+    import json
+    try:
+        with open(fr"Aulas/Aula_5/Banco.json" , 'r') as leitura:
+            banco = dict(json.load(leitura))                                    # dict - Ele coverte para dicionario
+        nomes = input('Digite o seu user name: ')
+        if nomes in banco["Nomes"]:                                             # == True
+            print('Nome encontrado!')
+        else:
+            print('Nome não encontrado!')
+
+    except Exception as erro:
+        print(erro)
+
+def adicao():
+    import json
+    try:
+        with open(fr'Aulas/Aula_5/Banco.json', 'r') as Leitura:
+            banco = dict(json.load(Leitura))
+        nome = input('Digite o nome que deseja adicionar: ')
+        banco["Nomes"].append(nome)                                 # Nome do json [nome da key] .append(nome a ser adicionado "Apenas se for uam lista") 
+        with open(fr'Aulas/Aula_5/Banco.json', 'w') as adicao:
+            adicao = json.dump(banco, adicao, indent=2)             # dump(nome a ser adicionado, banco a ser adicionado, e tabeamento)
+
+    except Exception as erro:
+        print(erro)
+adicao()

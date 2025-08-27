@@ -1,21 +1,4 @@
-{    
-"0":    {
-        "nome" : "gomes",
-        "idade" : 26,
-        "profissao" : ["Professor", "Garoto de programa", "suporte"] 
-        },
-
-"1":    {
-        "nome" : "Oliveira",
-        "idade" : 30,
-        "profissao" : {"Profissao" : "Eletricista",
-                        "Habilidade" : ["Atento", "Charmoso"]}
-        }
-
-},
-
-{       
-     "note_"
+{
+        "login":["abc","martis"],
+        "senha":[1234567890,"minec"]
 }
-
-//invodfveofivfebn
