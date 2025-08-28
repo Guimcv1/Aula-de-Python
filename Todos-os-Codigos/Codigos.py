@@ -272,6 +272,7 @@ lista.insert                          # Insere um valor em uma possição especi
 
 # ----------------------------------------------------- Json --------------------------------------------------------
 
+json.dump(lista, local_do_arquivo, ensure_ascii=False'''norma culta ingles''', indent=2 '''indentação''')
 
 
 
@@ -295,12 +296,9 @@ try:
 except Exception as e:                                      # A função Exception relata o erro ocorrido no codigo
             print(f"Erro ao gravar o arquivo: {e}")
 
-<<<<<<< HEAD
 
-=======
 # -------------------------------------------------- lambda ----------------------------------------------------
 
-# função de Linha porsso dar o valor de uma linha
+# função de Linha posso dar o valor de uma linha
 
 limpar = lambda: os.system('cls' if os.name == 'nt' else 'clear')
->>>>>>> a30887ab9121c4063eade32e36b4f4587eca3016

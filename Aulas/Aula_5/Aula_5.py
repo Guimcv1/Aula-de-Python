@@ -168,7 +168,7 @@ def Atividade6():
 
 def dev():
     import json
-    with open(fr"Aulas/Aula_5/texto.json", "r", encoding="utg-8") as js:
+    with open(fr"Aulas/Aula_5/texto.json", "r", encoding="utf-8") as js:
         a = dict(json.load(js))
     
 def test():
@@ -176,7 +176,7 @@ def test():
     try:
         with open(fr"Aulas/Aula_5/Banco.json" , 'r') as leitura:
             banco = dict(json.load(leitura))                                    # dict - Ele coverte para dicionario
-        nomes = input('Digite o seu user name: ')
+        nomes = input('Digite o seu User name: ')
         if nomes in banco["Nomes"]:                                             # == True
             print('Nome encontrado!')
         else:

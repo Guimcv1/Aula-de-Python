@@ -30,7 +30,7 @@ def jsom():
                 if novo_arquivo:
                     with open(fr'Aulas/Aula_6/{novo_arquivo}.json', 'r', encoding = 'utf-8') as f:
                         dados_existentes = json.load(f)   
-                dados_existentes.extend(usuarios)       
+                dados_existentes.extend(usuarios)                                   # Pega todos os dados de uma lista e coloca no final de outra lista
 
                 with open(fr'Aulas/Aula_6/{novo_arquivo}.json', 'w', encoding = 'utf-8') as f:
                     json.dump(usuarios, f, ensure_ascii=False, indent=4)            # ensure_ascii=False --> fala que não está dentro da norma culta inglesa
