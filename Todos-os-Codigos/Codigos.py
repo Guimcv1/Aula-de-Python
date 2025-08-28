@@ -257,15 +257,9 @@ introduction("Kent", "Clark")                               # Atribuição de va
 introduction(first_name = "James", last_name = "Bond")
 introduction(last_name = "Skywalker", first_name = "Luke")
 introduction(None)                                          # Dar o valor nulo
+global var                                                  # Transforma a variavel em global
 
 
-# json
-
-# Pode se usar o nome: gui --> chave : porta que a chave abre
-# 
-with open(f'{arquivo}.json', 'r', encoding="utf-8") as f:
-            dados = json.load(f)
-print(f"{dados['nome']} - {dados['idade']} anos")     #  Imprime o nome e a idade de cada dado no arquivo JSON
 
 #------------------------------ Lista ------------------------------
 
@@ -291,7 +285,11 @@ elem not in my_list                   # Verifica se um elemento não está na mi
 
 # ----------------------------------------------------- Json --------------------------------------------------------
 
-
+# Pode se usar o nome: gui --> chave : porta que a chave abre
+# 
+with open(f'{arquivo}.json', 'r', encoding="utf-8") as f:
+            dados = json.load(f)
+print(f"{dados['nome']} - {dados['idade']} anos")     #  Imprime o nome e a idade de cada dado no arquivo JSON
 
 #----------------------------------------------------- Matriz ------------------------------------------------
 
