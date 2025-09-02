@@ -44,7 +44,7 @@ def jsom():
                     dados = json.load(f)
                 print(f'{'-'*20} USUARIOS {'-'*20} ')
                 input('')
-                for usario in dados:
+                for usuario in dados:
                     for chave in usuario:
                         print(f'{chave().capitalize()}: {usuario.get(chave)}')
                         input('')
