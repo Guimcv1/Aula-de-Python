@@ -54,4 +54,13 @@ def s():
     verific.upper
     print(verific)
 
-s()
+def Teste(): 
+    idade = input("Digite a sua idade: ")
+    nome = input('Digite o seu nome: ')
+    def login(nome,idade):
+        print(f"seja bem vindo {nome} vc tem {idade} Anos de idade")
+        yield f"{nome} você tem 1"
+        yield f"{nome} você tem 2"
+        yield f"{nome} você tem 3"
+    print(login(nome,idade))
+Teste()

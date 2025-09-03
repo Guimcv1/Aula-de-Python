@@ -171,7 +171,8 @@ def ver():
             print("Opção inválida.")
     match prosseguir:
         case 'n':
-            break
+            print('')
+          
 
 
 # Laços com FOR 
@@ -247,9 +248,43 @@ def Manager():
         f.close()                                           # Fecha o arquivo após a operação
 
         
+#------------------------------------------------- def ----------------------------------------
+
+def introduction(first_name, last_name):
+    print("Olá meu nome é", first_name, last_name)      
+introduction("Skywalker", "Luke")                           # Atribuição de valores
+introduction("Quick", "Jesse")                              # Atribuição de valores
+introduction("Kent", "Clark")                               # Atribuição de valores
+introduction(first_name = "James", last_name = "Bond")
+introduction(last_name = "Skywalker", first_name = "Luke")
+introduction(None)                                          # Dar o valor nulo
+global var                                                  # Transforma a variavel em global
 
 
-# json
+
+#------------------------------ Lista ------------------------------
+
+lista = [1,2,3,4,5,6,7,8,9,10]        # Definir o nome da lista e os intens que tem dentro dela
+print(lista)                          # Imprimir os inntens da lista
+print(random.choices(lista, k=3))     # Imprime k=3 nomes aleatorio da lista 
+lista.append(11)                      # adiciona um objeto na lista na ultima possição Ex: 11
+lista.copy                            # Ele copia uma lista
+lista.pop                             # Recorta o objeto (copia e deleta da lista)
+lista.remove                          # Ele remove um objeto da lista
+lista.reverse                         # Ele inverte os dados da lista 
+lista.sort                            # Ele organiza a lista (Alfabeticamente, numericamente, ...)
+lista.sort(reverse = True )           # inverte a ordem da organização
+lista.insert                          # Insere um valor em uma possição especifica na lista (posiçao,valor)
+len(lista)                            # Conta a quantidade de itens dentro de uma lista
+list_2 = list_1[:]                    # : Pega os itens dentro da lista
+list_2 = list_1[1:3]                  # Pega os itens que estão na posicão 2 e 3 (index 1 e 2) dentro da lista i = -1
+new_list = my_list[1:-1]              # Pega os index 1 até o penultimo idex o -1 não entra dentro da fatia
+del my_list[1:3]                      # Remove os itens dentro do index 1 á 3
+elem in my_list                       # Verifica se um elemento está na minha lista - bool
+elem not in my_list                   # Verifica se um elemento não está na minha lista - bool
+
+
+# ----------------------------------------------------- Json --------------------------------------------------------
 
 # Pode se usar o nome: gui --> chave : porta que a chave abre
 # 
@@ -274,8 +309,36 @@ lista.insert                          # Insere um valor em uma possição especi
 
 json.dump(lista, local_do_arquivo, ensure_ascii=False'''norma culta ingles''', indent=2 '''indentação''')
 
+#----------------------------------------------------- Matriz ------------------------------------------------
 
+# Uma tabela de quatro colunas/quatro linhas ‒ uma matriz bidimensional (4x4)
+ 
+table = [[":(", ":)", ":(", ":)"],
+         [":)", ":(", ":)", ":)"],
+         [":(", ":)", ":)", ":("],
+         [":)", ":)", ":)", ":("]]
+ 
+print(table)
+print(table[0][0])  # outputs: ':('
+print(table[0][3])  # outputs: ':)'
 
+# Cubo - uma matriz tridimensional (3x3x3)
+ 
+cube = [[[':(', 'x', 'x'],
+         [':)', 'x', 'x'],
+         [':(', 'x', 'x']],
+ 
+        [[':)', 'x', 'x'],
+         [':(', 'x', 'x'],
+         [':)', 'x', 'x']],
+ 
+        [[':(', 'x', 'x'],
+         [':)', 'x', 'x'],
+         [':)', 'x', 'x']]]
+ 
+print(cube)
+print(cube[0][0][0])  # outputs: ':('
+print(cube[2][2][0])  # outputs: ':)'
 
 # -------------------------------------------------- Swicht Case ----------------------------------------------------
 
