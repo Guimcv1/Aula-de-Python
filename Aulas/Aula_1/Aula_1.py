@@ -1,1 +1,1 @@
-import this
+print('O python está funcionando!!!')
