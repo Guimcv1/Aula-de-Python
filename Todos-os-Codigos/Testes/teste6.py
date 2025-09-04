@@ -20,8 +20,8 @@ def des():
     lista2 = []
     alfabeto =  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ç','$','!','@','#','%']
     numero = [str(i) for i in range(36,80)]
-    print(numero)
     conplat =[]
+    espaco = ' '
     while True:
         conp = input('Digite o arquivo criptografado\n')
         if conp == "":
@@ -35,6 +35,7 @@ def des():
         if i in numero:
             numero.reverse()
             lista = numero.index(i)
+            lista2 = espaco.join([conplat[i:i+2] for i in range(0, len(conplat), 2)]) 
             lista2.append(alfabeto[lista])
             
     print(*lista2)
