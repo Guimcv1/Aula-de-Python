@@ -4,7 +4,7 @@
     "CPF": "07420328170",
     "Data": "30/01/2009",
     "Email": "guimcvilmar@gmail.com",
-    "Dinheiro": 0.0,
+    "Dinheiro": Infinity,
     "Senha": "785612"
   }
 ]
