@@ -264,25 +264,26 @@ global var                                                  # Transforma a varia
 
 #------------------------------ Lista ------------------------------
 
-lista = [1,2,3,4,5,6,7,8,9,10]        # Definir o nome da lista e os intens que tem dentro dela
-print(lista)                          # Imprimir os inntens da lista
-print(random.choices(lista, k=3))     # Imprime k=3 nomes aleatorio da lista 
-lista.append(11)                      # adiciona um objeto na lista na ultima possição Ex: 11
-lista.copy                            # Ele copia uma lista
-lista.pop                             # Recorta o objeto (copia e deleta da lista)
-lista.remove                          # Ele remove um objeto da lista
-lista.reverse                         # Ele inverte os dados da lista 
-lista.sort                            # Ele organiza a lista (Alfabeticamente, numericamente, ...)
-lista.sort(reverse = True )           # inverte a ordem da organização
-lista.insert                          # Insere um valor em uma possição especifica na lista (posiçao,valor)
-len(lista)                            # Conta a quantidade de itens dentro de uma lista
-list_2 = list_1[:]                    # : Pega os itens dentro da lista
-list_2 = list_1[1:3]                  # Pega os itens que estão na posicão 2 e 3 (index 1 e 2) dentro da lista i = -1
-new_list = my_list[1:-1]              # Pega os index 1 até o penultimo idex o -1 não entra dentro da fatia
-del my_list[1:3]                      # Remove os itens dentro do index 1 á 3
-elem in my_list                       # Verifica se um elemento está na minha lista - bool
-elem not in my_list                   # Verifica se um elemento não está na minha lista - bool
-
+lista = [1,2,3,4,5,6,7,8,9,10]                                      # Definir o nome da lista e os intens que tem dentro dela
+print(lista)                                                        # Imprimir os inntens da lista
+print(random.choices(lista, k=3))                                   # Imprime k=3 nomes aleatorio da lista 
+lista.append(11)                                                    # adiciona um objeto na lista na ultima possição Ex: 11
+lista.copy                                                          # Ele copia uma lista
+lista.pop                                                           # Recorta o objeto (copia e deleta da lista)
+lista.remove                                                        # Ele remove um objeto da lista
+lista.reverse                                                       # Ele inverte os dados da lista 
+lista.sort                                                          # Ele organiza a lista (Alfabeticamente, numericamente, ...)
+lista.sort(reverse = True )                                         # inverte a ordem da organização
+lista.insert                                                        # Insere um valor em uma possição especifica na lista (posiçao,valor)
+len(lista)                                                          # Conta a quantidade de itens dentro de uma lista
+list_2 = list_1[:]                                                  # : Pega os itens dentro da lista
+list_2 = list_1[1:3]                                                # Pega os itens que estão na posicão 2 e 3 (index 1 e 2) dentro da lista i = -1
+new_list = my_list[1:-1]                                            # Pega os index 1 até o penultimo idex o -1 não entra dentro da fatia
+del my_list[1:3]                                                    # Remove os itens dentro do index 1 á 3
+elem in my_list                                                     # Verifica se um elemento está na minha lista - bool
+elem not in my_list                                                 # Verifica se um elemento não está na minha lista - bool
+item = lista.index('nome do item')                                  # Procurar um item da lista e fala o seu indice
+itemitem = lista[index da palavra].find('algo a procurar')          # Procura algo especifico dentro de um item tendo o
 
 # ----------------------------------------------------- Json --------------------------------------------------------
 
@@ -291,6 +292,15 @@ elem not in my_list                   # Verifica se um elemento não está na mi
 with open(f'{arquivo}.json', 'r', encoding="utf-8") as f:
             dados = json.load(f)
 print(f"{dados['nome']} - {dados['idade']} anos")     #  Imprime o nome e a idade de cada dado no arquivo JSON
+
+# banco de dados com json
+
+
+
+
+
+
+
 
 #------------------------------ Lista ------------------------------
 
