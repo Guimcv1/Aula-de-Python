@@ -42,7 +42,7 @@ input('Digite algo')    # input
 # Pega os valores de uma lista e substitui por outra lista seguindo o mesmo index
 for i in input:                                 # ira se repetir enquanto tiver valores dentro de input em que ele pasara letra por letra
     if i in lista:                              # se tem o valor de i dentro de lista
-        nova_lista = lista.index(i)             # pega o index do input dentro la lista e dar o valor a uma variavel
+        nova_lista = lista.index(i)             4# pega o index do input dentro la lista e dar o valor a uma variavel
         lista2.append(lista3[nova_lista])       # adiciona a lista 2 o valor já substituido da lista de acordo com o index
 
 
