@@ -11,8 +11,6 @@ dta = date.today()
 dt = dta.strftime("%d/%m/%Y")
 limpar = lambda: os.system('cls' if os.name == 'nt' else 'clear')
 
-
-
 def caregar():
     try:
         with open(fr'Todos-os-Codigos/desafios/Bancos/Freira.json', 'r', encoding='utf-8') as f:
@@ -27,41 +25,41 @@ def save(dados):
 
 def inicio():
     while True:
-        save = caregar()
+        saves = caregar()  # Corrigido: não usa mais 'save'
         limpar()
-        print(save)
-        print(f"{20 * '*'} As Irmãs {20 * "*"}")
+        print(f"{20 * '*'} As Irmãs {20 * '*'}")
         s = int(input('1 | Iniciar\n2 | Config\n3 | Sair\n'))
-        nn = list(range(len(save)))  # Mostra uma lista com todos os índices possíveis
-        input(nn)
-        if s >= nn + 1:                         # nn é a variavel que damos a quantidade de indexs na lista
-            print('Digite um numero valido.')
+        nn = list(range(len(saves)))  # Corrigido aqui também
+        ns = 1 + len(nn)
+        if s > ns:
+            print('Digite um numero Valido.')
             time.sleep(1)
             continue
         else:
             ...
         limpar()
+        dado = caregar()
         match s:
             case 1:
-                dado = caregar()                            # Fazer um sistema para imprimir no terminal e excluir saves
-                if dado == caregar(): 
-                    i = df()
-                    limpar()
+                limpar()
+                i = df()
+                if i <= ns:
                     match i:
                         case 1:
-                            n = input('Digite o nome do save: ')
-                            print(f"lista: {dado}")
-                            dd = {'Nome': n,
-                                  'Data': dt,
-                                  'Hora': ht,
-                                  'Estado': 0}
-                            dado.append(dd)
-                            return dado 
-                        case 2:
-                            return save
+                            nome = input('Digite o nome do save: ')
+                            salvar(nome)   
                 else:
-                    print(dado)
-        break
+                    print('Digite um numero valido.')
+                    time.sleep(1)
+                    continue
+            case 2:
+                ...
+            case 3:
+                break
+        
+        
+        
+    
 
 def texto(palavra,v=0.1):
     for i in palavra:
@@ -69,9 +67,9 @@ def texto(palavra,v=0.1):
         sys.stdout.flush()
         time.sleep(v)  # Ajuste o tempo conforme desejado
         
-def salvar(save,num):
+def salvar(Nsave,num=0):
     dado = caregar()
-    dd = {'Nome': save,
+    dd = {'Nome': Nsave,
           'Data': dt,
           'Hora': ht,
           'Estado': num}
@@ -85,13 +83,14 @@ def df():
     lis = caregar()
     num_lis = len(lis)  # Mostra uma lista com todos os índices possíveis
     num_lis = int(num_lis)
-    print(num_lis)
+    
     print(f'1 | Novo Jogo')
     nn = 2
-    for i in num_lis:
+    for i in range(num_lis):
         nn += 1
         print(f'{i+2} | {lis[i]['Nome']}')
     i = int(input(f'{nn} | Sair\n'))
+    return i
 
 def Jogo():
     while True:
@@ -126,7 +125,8 @@ def Jogo():
             case _:
                 print('Erro')
         break
-df()
+
+
 Jogo()
 dado = caregar()
 print(dado)
