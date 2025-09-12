@@ -29,10 +29,12 @@ def inicio():
     while True:
         save = caregar()
         limpar()
+        print(save)
         print(f"{20 * '*'} As Irmãs {20 * "*"}")
         s = int(input('1 | Iniciar\n2 | Config\n3 | Sair\n'))
-        
-        if s >= 5:
+        nn = list(range(len(save)))  # Mostra uma lista com todos os índices possíveis
+        input(nn)
+        if s >= nn + 1:                         # nn é a variavel que damos a quantidade de indexs na lista
             print('Digite um numero valido.')
             time.sleep(1)
             continue
@@ -42,16 +44,8 @@ def inicio():
         match s:
             case 1:
                 dado = caregar()                            # Fazer um sistema para imprimir no terminal e excluir saves
-                if dado == caregar():  
-                    match save and 'Nome' in save[0]:
-                        case True:
-                            match save and 'Nome' in save[1] == '':
-                                case True:
-                                    i = int(input(f'1 | Novo Jogo\n2 | {save[0]['Nome']} {save[0]['Data']} {save[0]['Hora']}\n3 | {save[1]['Nome']} {save[1]['Data']} {save[1]['Hora']}\n4 | Sair\n'))
-                                case _:
-                                    i = int(input(f'1 | Novo Jogo\n2 | {save[0]['Nome']} {save[0]['Data']} {save[0]['Hora']}\n3 | Sair\n'))
-                        case _:
-                            i = int(input('1 | Novo Jogo\n2 | Sair\n'))
+                if dado == caregar(): 
+                    i = df()
                     limpar()
                     match i:
                         case 1:
@@ -83,19 +77,25 @@ def salvar(save,num):
           'Estado': num}
     dado.append(dd)
     save(dado)
-    
-
 
 def cap1():
     texto('Teste de palavras')
 
-
-
+def df():
+    lis = caregar()
+    num_lis = len(lis)  # Mostra uma lista com todos os índices possíveis
+    num_lis = int(num_lis)
+    print(num_lis)
+    print(f'1 | Novo Jogo')
+    nn = 2
+    for i in num_lis:
+        nn += 1
+        print(f'{i+2} | {lis[i]['Nome']}')
+    i = int(input(f'{nn} | Sair\n'))
 
 def Jogo():
     while True:
         dados = inicio()
-        input(dados)
         save(dados)
         # Carrega o save atualizado
         save_data = caregar()
@@ -126,6 +126,7 @@ def Jogo():
             case _:
                 print('Erro')
         break
+df()
 Jogo()
 dado = caregar()
 print(dado)
