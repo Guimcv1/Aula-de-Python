@@ -69,6 +69,7 @@ def texto(palavra,v=0.1):
         
 def salvar(Nsave,num=0):
     dado = caregar()
+    
     dd = {'Nome': Nsave,
           'Data': dt,
           'Hora': ht,

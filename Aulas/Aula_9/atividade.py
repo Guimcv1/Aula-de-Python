@@ -29,7 +29,7 @@ class Personagem:
         self.__vida = nova_vida
 
     def atacar(self, personagem):                   # ira reescrever o (atacar) do pai
-        personagem.vida -= 30
+        personagem.vida -= 20
         print(f'{self.nome} atacou {personagem.nome} e tirou 20 pontos de vida, e agora esta com {personagem.vida}')
 
 class Guerreiro(Personagem):                        # Herança - Herdando de persongem
