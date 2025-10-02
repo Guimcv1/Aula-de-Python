@@ -1,6 +1,7 @@
 import os
 import time
 import sys
+<<<<<<< HEAD
 import json
 from datetime import date
 from datetime import datetime
@@ -131,3 +132,22 @@ def Jogo():
 Jogo()
 dado = caregar()
 print(dado)
+=======
+
+limpar = lambda: os.system('cls' if os.name == 'nt' else 'clear')
+
+def inicio():
+    while True:
+        limpar()
+        print(f"{20 * '*'} As Irmãs {20 * "*"}")
+
+
+def texto(palavra):
+    for i in palavra:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.2)  # Ajuste o tempo conforme desejado
+        
+
+inicio()
+>>>>>>> 675609c1e16924cdcfc59caa3ded69266d767794

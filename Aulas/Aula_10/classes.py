@@ -77,7 +77,7 @@ class Biblioteca:
     def gerar_id(self):
         """Gera um novo ID único para os livros."""
         if not self.__livros:
-            return 1
+            return 1    
         return max(l.id_livro for l in self.__livros) + 1
 
     # ----------- Operações CRUD -----------
