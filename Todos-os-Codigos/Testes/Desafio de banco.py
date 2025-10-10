@@ -1,12 +1,11 @@
-# Bibliotecas
-import os
-import json
-import time
-
-# Funções
-limpar = lambda: os.system('cls' if os.name == 'nt' else 'clear')
-
-def jsom():
-    with open(fr'Todos-os-Codigos/Testes/Dados.json', 'w', encoding='utf-8') as open:
-        banco = dict(json.load(open))
-    
+try:
+    value = input("Entre um valor: ")
+    print(value/value)
+except ValueError:
+    print("Entrada incorreta...")
+except ZeroDivisionError:
+    print("Entrada muito ruim...")
+except TypeError:
+    print("muito muito ruim entrada...")
+except:
+    print("Booo!")
