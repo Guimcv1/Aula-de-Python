@@ -1,0 +1,79 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coletânea — Botões, Inputs, Imagens, Nova Aba</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Coletânea de componentes básicos</h1>
+
+    <!-- Seção de botões -->
+    <section>
+      <h2>Botões</h2>
+      <p>Exemplos de botões com classes utilitárias e listeners em JS.</p>
+      <div class="row">
+        <button class="btn btn-primary" id="primaryBtn">Primário</button>
+        <button class="btn btn-outline" id="outlineBtn">Outline</button>
+        <button class="btn btn-danger" id="dangerBtn">Perigo</button>
+      </div>
+    </section>
+
+    <!-- Seção de campos de texto -->
+    <section>
+      <h2>Caixas de texto</h2>
+      <form id="demoForm">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@exemplo.com" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva algo..."></textarea>
+
+        <div class="row">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="button" class="btn" id="limparBtn">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Seção de imagens formatadas -->
+    <section>
+      <h2>Imagens formatadas</h2>
+      <figure class="image-card">
+        <img src="https://picsum.photos/seed/pic1/800/450" alt="Paisagem exemplo" class="responsive-img rounded">
+        <figcaption>Legenda da imagem — <em>Picsum</em>.</figcaption>
+      </figure>
+
+      <figure class="image-card small">
+        <img src="https://picsum.photos/seed/pic2/400/250" alt="Exemplo pequeno" class="responsive-img circle">
+        <figcaption>Imagem circular pequena.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Abrir nova aba -->
+    <section>
+      <h2>Abrir nova aba</h2>
+      <p>Link que abre em nova aba (atributo <code>target="_blank"</code>) — sempre adicione <code>rel="noopener noreferrer"</code> por segurança.</p>
+      <p><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">Abrir MDN em nova aba</a></p>
+
+      <p>Também é possível abrir via JavaScript (exemplo abaixo):</p>
+      <button class="btn" id="openTabBtn">Abrir nova aba via JS</button>
+    </section>
+
+    <!-- Área de saída / logs -->
+    <section>
+      <h2>Saída</h2>
+      <pre id="output" class="output" aria-live="polite"></pre>
+    </section>
+
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -6,7 +6,11 @@ import json
 
 # ideia: pegar e adicionar uma chave a um .json existente se ouver, se não ouver crie um
 
+<<<<<<< HEAD
 '''def diciona():
+=======
+def diciona():
+>>>>>>> 675609c1e16924cdcfc59caa3ded69266d767794
     dicionario = []
     while True:
         nome_adicao = input('Digite o nome da lista que deseja dicionar: ')
@@ -21,6 +25,7 @@ import json
                 novo_arquivo = input('Digite o nome do arquivo: ').strip().lower()
                 with open(fr'Todos-os-Codigos/Testes/{novo_arquivo}', 'w') as new_lista:
                     json.dump(dicionario, novo_arquivo, ensure_ascii=False, indent = 2)
+<<<<<<< HEAD
 '''
 import os
 import json
@@ -129,3 +134,9 @@ def Banco():
         acesso()
 
 Banco()
+=======
+
+
+
+diciona()
+>>>>>>> 675609c1e16924cdcfc59caa3ded69266d767794

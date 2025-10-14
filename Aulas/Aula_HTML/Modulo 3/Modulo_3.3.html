@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form action="submit-form.php" method="POST">
+    </form>
+    <!-- Caixa de entrada com obrigatoriedade -->
+    <label for="email:">Email:</label>
+    <input type="email" id="email" name="'username" required>
+    <label for="message">Mensagem: </label>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+    <label for="message">mensage:</label>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+    <!-- Seleção -->
+<br>
+<br>
+<br>   
+    <label for="Macarão">Qual o macarão:</label>
+    <select id="Macarão" name="macarão=">
+        <option value="Spaghetti">spaghetti</option>
+        <option value="Penne">Penne</option>
+        <option value="Lasagna">Lasagna</option>
+        <option value="Farfalle">Farfalle</option>
+    </select>
+<br>
+<br>
+<br>
+    <!-- Imprimir um alerta com um botão -->
+     <button type="button" onclick="alert('teste de alerta')">Clique aqui</button>
+<br>
+<br>
+<br>
+    <!-- Estrutura de um formulario -->
+    <fieldset>
+        <legend>Formulario</legend>
+        <label for="endereço">Endereço:</label>
+        <input type="text" id="endereço" name="endereço">
+        <br>
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade">
+        <br>
+        <label for="CEP">CEP:</label>
+        <input type="text" id="CEP" name="CEP">
+    </fieldset>
+<br>
+<br>
+<br>
+    <!-- Entrada com valor -->
+    <label for="Primeiro-nome">Primeiro Nome:</label>
+    <input type="text" id="Primeiro-nome" name="Primeiro-nome" value="Guilherme">
+<br>
+<br>
+<br>
+    <!-- Nome com uma dica -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="name@email.com">
+<br>
+<br>
+<br>
+    <!-- Campo não alteravel -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="Guilherme" disabled>
+<br>
+<br>
+<br>    
+    <!-- Limites de caractere -->
+    <input type="text" name="username" value="Numero maximo de 20" maxlength="20"><br>
+    <input type="number" name="age" min="18" max="110"> 
+<br>
+<br>
+<br>
+    <!-- Autocompleto -->
+    <input type="text" name="endereço" autocomplete="off"><br>
+<br>
+<br>
+<br>
+    <!-- Padrão -->
+     <input type="text" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+<br>
+<br>
+<br>    
+    <!-- Construção de formulario -->
+    <!-- DEfinição de elementos de formulario -->
+    <form></form> <!-- Ele encapsula o conteúdo do formulario -->
+    <action></action> <!-- Especifica onde enviar os dados do formulario quando enviado -->
+    <method></method> <!-- define como envia-los -->
+<br>
+<br>
+<br>
+    <!-- Capos de entrada -->
+    <input> <!-- Usa-se o input para criar os campos -->
+    <input name=""> <!-- É usado para indentificar  os dados -->
+    <label></label> <!-- É usado para fornecer um texto descritivo -->
+    <input type="submit"> 
+    <button type="submit">Clique aqui</button>
+    <form action="/submit" method="POST">
+<br>
+<br>
+<br>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <br>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br>
+  
+  <input type="submit" value="Login">
+  <input type="reset" value="Reset">
+</form>
+<br>
+<br>
+<br>
+<!-- Enviar os dados -->
+<form action="/submit-contact" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+  <br>
+  
+  <button type="submit">Send</button>
+</form>
+<br>
+<br>
+<br>
+<!-- Teste de formulario, Calculadora de IMC-->
+<form action="/submit-bmi" method="post">
+    <label for="peso">Peso (Kg):</label>
+    <input type="number" id="peso" name="peso" required>
+    <br>
+
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="altura" name="altura" required>
+    <br>
+
+    <button type="submit">Calcular IMC</button>
+</form>
+<br>
+<br>
+<br>
+<form action="/submit" method="POST">
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  
+  <p>Choose your meal preference:</p>
+  <label for="vegetarian">Vegetarian</label>
+  <input type="radio" id="vegetarian" name="meal" value="vegetarian" required>
+  <label for="non-vegetarian">Non-Vegetarian</label>
+  <input type="radio" id="non-vegetarian" name="meal" value="non-vegetarian" required>
+  <br>
+  
+  <p>Select the workshops you'd like to attend:</p>
+  <label for="workshop1">Workshop 1</label>
+  <input type="checkbox" id="workshop1" name="workshop1">
+  <label for="workshop2">Workshop 2</label>
+  <input type="checkbox" id="workshop2" name="workshop2">
+  <label for="workshop3">Workshop 3</label>
+  <input type="checkbox" id="workshop3" name="workshop3">
+  <br>
+  
+  <input type="submit" value="Register">
+</form>
+</body>
+</html>
