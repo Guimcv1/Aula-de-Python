@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 3</title>
+</head>
+<body>
+    <!-- Imagens -->
+    <img src="https://assets.monica.im/tools-web/_next/static/media/pc_upscale.99caadae.webp" alt="Camaleão" width="340" height="250">
+    <img src="https://rounder.pics/assets/img/ui/square-image.webp" alt="Cachorro" width="340" height="250">
+    <img src="https://rounder.pics/assets/img/ui/square-image.webp" alt="Largura da imagem com width" width="340" height="250">
+    <img src="https://rounder.pics/assets/img/ui/square-image.webp" alt="Autura da imagem com height" width="340" height="250">
+    <img src="https://edube.org/uploads/media/default/0001/03/mountain_landscape.jpg" alt="Mountain landscape" width="340" height="250">
+    <img src="Modulo 3/imagem_de_teste.jpg" alt="Imagem local">
+    <!-- Caminho Relativo -> são os imagens locais baixados -->
+    <!-- Caminho Absoluto -> são os imagens online na WEB -->
+    <h3>Responsividade de imagen</h3>
+    <p>Usa-se o srcset e o sizes</p>
+    <!-- O srcset usa uma coletanea de arquivos de imagem e usa a mais apropriada de acordo com a resolução da tela -->
+    <!-- O sizes ultiliza o o tamanho da tela para esticar ou diminuir a imagem de acorodo com ele -->
+    <img src=sunflowers.jpg"
+     alt="Sunflowers in the sunset"
+     srcset="sunflowers-small.jpg 480w,     
+             sunflowers-medium.jpg 800w,
+             sunflowers-large.jpg 1200w"
+     sizes="(max-width: 480px) 95vw,
+            (max-width: 800px) 45vw,
+            30vw">
+    <!-- Borda da imagem -->
+     <h3>Fazer borda - border</h3>
+     <img src="https://edube.org/uploads/media/default/0001/03/mountain_landscape.jpg" alt="Imagem de exemplo" borda="2">
+     <img src="https://edube.org/uploads/media/default/0001/03/mountain_landscape.jpg" alt="hspace e vspace" hspace="20%" vspace="20%">
+     <img src="https://edube.org/uploads/media/default/0001/03/mountain_landscape.jpg" alt="align" align="right">
+     
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site do Enaldo - Ultra Mega Futurista</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00ff9d;
+            text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d, 0 0 30px #00ff9d;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #00ff9d;
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .links a {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            background-color: rgba(0, 255, 157, 0.1);
+            color: #00ff9d;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #00ff9d;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+        }
+
+        .links a:hover {
+            background-color: #00ff9d;
+            color: #1f1f1f;
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(0, 255, 157, 1);
+        }
+
+        .image-container {
+            margin-top: 20px;
+            animation: rotate 10s infinite linear;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 8px solid #00ff9d;
+            box-shadow: 0 0 25px rgba(0, 255, 157, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 255, 157, 1);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #aaa;
+            font-size: 1rem;
+            text-shadow: 0 0 5px #163869, 0 0 10px #1741b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Site do Enaldo!</h1>
+    <p>Prepare-se para uma jornada futurística nos jogos do Itch.io!</p>
+
+    <div class="image-container">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.vecteezy.com%2Ffotos-gratis%2Fcachorro&psig=AOvVaw1qBPbig6sM_K4jCa91P9Nq&ust=1756479098380000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDovargrY8DFQAAAAAdAAAAABAE" alt="Cachorrinho Fofo">
+    </div>
+
+    <div class="links">
+        <a href="https://itch.io" target="_blank">Jogo 1 - Aventura Épica</a>
+        <a href="https://itch.io" target="_blank">Jogo 2 - Desafio Espacial</a>
+        <a href="https://itch.io" target="_blank">Jogo 3 - Mundo de Magia</a>
+        <a href="https://itch.io" target="_blank">Jogo 4 - Corrida Selvagem</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Site do Enaldo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

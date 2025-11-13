@@ -1,0 +1,13 @@
+.button{
+    background-color: blue;
+    color: black;
+}
+[data-highlight]{
+    background-color: blue;
+}
+[data-highlight = "verde"]{
+    background-color: green;
+}
+[data-highlight = amarelo]{
+    background-color: yellow;
+}

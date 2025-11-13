@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Flask + JS</title>
+</head>
+<body>
+    <h1>Dados do Python</h1>
+    <div id="dados"></div>
+
+    <script>
+        // Fazendo uma requisição para o backend
+        fetch('/dados')
+            .then(response => response.json())
+            .then(data => {
+                // Exibindo os dados no HTML
+                const div = document.getElementById('dados');
+                div.innerHTML = `
+                    <p>Nome: ${data.nome}</p>
+                    <p>Idade: ${data.idade}</p>
+                    <p>Cidade: ${data.cidade}</p>
+                `;
+            })
+            .catch(error => console.error('Erro:', error));
+    </script>
+</body>
+</html>
