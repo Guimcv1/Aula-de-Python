@@ -79,9 +79,9 @@ def Questao10():
 altura=float(input('Digite a altura do triangulo: ').replace(',','.'))
 largura=float(input('Digite a largura do triangulo: ').replace(',','.'))
 area = (altura*largura)/2
-<<<<<<< HEAD
-print(f'A área do Triangulo é: {area}')
-=======
+
 print(f'A área do Triangulo é: {area}')
 
->>>>>>> 675609c1e16924cdcfc59caa3ded69266d767794
+print(f'A área do Triangulo é: {area}')
+
+
