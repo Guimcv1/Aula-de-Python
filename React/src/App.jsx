@@ -4,6 +4,7 @@ import { useState } from "react";
 
 
 function App(){
+
   const [tasks, setTasks] = useState([
     {
     id: 1,
@@ -24,14 +25,25 @@ function App(){
     isCompleted: false,
     },
   ]);
+
+  function onTaskClick(taskId){
+    const newTasks = tasks.map(tasks => {
+      if (tasks.id == taskId){
+        return {...tasks, isCompleted: !tasks.isCompleted}
+      } 
+      return tasks;
+
+    })
+  }
+
   return (
     <div className="w-screen h-screen bg-amber-100 flex justify-center p6">
       <div className="w-[500px]">
-        <h1 className="text-3xl text-green-700 font-bold text-center">
+        <h1 className="text-3xl text-green-700 font-bold text-center ">
           Gerenciador de tarefas
-        </h1>
-        <AddTask />
-        <Tasks tasks={tasks}/>
+        </h1>        
+        <br/>
+        <Tasks tasks={tasks} onTaskClick={onTaskClick}/>
       </div>
     </div>
   );

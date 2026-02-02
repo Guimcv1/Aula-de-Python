@@ -150,3 +150,32 @@ content: [
 Tailwind
 
 É um estilizador te css usando classes proprietarias como um "Vertical-Animation()"
+
+
+# Lucide react
+
+npm install lucide-react@0.435.0
+
+import { ChevronRightIcon } from "lucide-react";
+
+lucide é uma feramenta para colocar diversos pack de icones modificaveis como setas e quedrados e outras coisas
+
+#--------------------------------------------------
+
+const [tasks, setTasks] = useState()
+
+esta é uma função que é ultilizada para atualizar a pagina após uma interação com um novo valor atribuido
+é uma constante/função que que coloca a variavel, valor final, valor inicial
+
+ex: ao clicar em um botão chamado banana ele vira maça
+
+const [fruta, setFruta] = useState("banana")
+
+<h1>{fruta}</h1>
+
+<button onClick={() => setFruta('maça')}>Tranformar banana em maça</button>
+
+
+#--------------------------------------------------
+
+function 
