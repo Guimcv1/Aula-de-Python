@@ -119,3 +119,32 @@ console.time() // Inicio do cronometro
 console.log("teste ") // Execução dentro do cronometro
 
 console.timeEnd() // fim do cronometro
+console.warn("Teste de alerta") // Alerta
+console.error("Exibe um erro")
+
+/*
+pegar caracteres
+
+variavel.charAT(numero)
+variavel.slice(0,5)
+variavel.split('') - Separa as palavras de acordo com a regra
+*/
+{
+let nome = "Guilherme Martins";
+let letra = nome.charAt(2);
+let letra_2 = nome.charAt(0);
+let palavra = nome.slice(0,6);
+let palavra_2 = nome.split(" ");
+console.log(letra); // -> i
+console.log(letra_2); // -> G
+console.log(palavra); // -> Guilhe
+console.log(palavra_2); // -> Guilhe
+}
+/*
+Transformar de novo uma variavel
+*/
+{
+    var nome = "123";
+    nome = Number(nome);
+    console.log(typeof nome)
+}
