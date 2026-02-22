@@ -374,3 +374,145 @@ alert(name + " is " + age + " years old");
 
 
 }
+
+{
+    let nome = prompt("Qual o seu nome?", "Seu nome");
+    nome = nome ? nome : "Sem nome";
+    alert("Seu nome é " + nome);
+}
+
+{
+    let remover = confirm("Deseja remover a data?");
+    let mensagem = remover ? "Remover data" : "Não remover data";
+    alert(mensagem);
+}
+//NOTE - Objetos com listas
+
+{
+    let objeto = [
+            {nome:"Guilherme",
+             idade:18
+            },
+            {
+             nome:"Davi",
+             idade:19
+            }
+        ];
+    while (true){
+        var id = prompt("Qual o id");
+        id = id ? id : null;
+        if (id > 1){
+            alert("Numero não é valido");    
+            continue;
+        }if (id === null){
+            alert("Digite um numero");    
+            continue;
+        }
+        else{
+            break;
+        }
+        };
+    console.log(id)    
+    var texto = `nome ${objeto[id].nome}, e a idade é ${objeto[id].idade}`
+    alert(texto);
+
+}
+
+//SECTION - if, else, elif e switch
+
+{
+    let condição = 1;
+    let segunda_condição = 2;
+    if(condição > 1){
+        //pós condição
+    } else if(segunda_condição >= 2 ){
+        //Este é o elif
+    } else{
+        //Caso tudo for falso ira iniciar esse
+    };
+
+    // switch
+    var caso = 1;
+
+    switch(Caso){
+        case 1:
+            // caso 1
+        case 2:
+            // caso 2
+        case _:
+            // caso nenhuma das opções 
+    };
+
+    // while
+
+    while(condição){
+        continue;
+        break;
+
+    }
+
+    // for 
+
+    var lista = [];
+    var fechar = false;
+    while (!fechar){
+        var nome = prompt("Coloque um nome ou cancele para fechar");
+
+        if (nome != null){
+            lista.push(nome);
+        }else{
+            fechar = true;
+        }
+    }
+    for(var i = 0; i < lista.length; i++){
+        console.log(lista[i]);
+    };
+
+    // for of - é o mesmo que o for i in lista/variavel do python
+
+    let cities = [
+        { name: "New York", population: 18.65e6 },
+        { name: "Cairo", population: 18.82e6 },
+        { name: "Mumbai", population: 19.32e6 },
+        { name: "São Paulo", population: 20.88e6 },
+        { name: "Mexico City", population: 21.34e6 },
+        { name: "Shanghai", population: 23.48e6 },
+        { name: "Delhi", population: 25.87e6 },
+        { name: "Tokyo", population: 37.26e6 }
+    ];
+    
+    for (let city of cities) {
+        if (city.population > 20e6) {
+            console.log(`${city.name} (${city.population})`);
+        }
+    }
+
+    // for in - indentifica as classes do objeto
+
+    let user = {
+        name: "Calvin",
+        surname: "Hart",
+        age: 66,
+        email: "CalvinMHart@teleworm.us"
+    };
+    for (let key in user) {
+        console.log(key); // -> name, surname, age, email
+    };
+
+}
+
+//!SECTION - funções
+{
+
+    function funcao(entrada){
+        return entrada + 10;
+    };
+    var num = prompt("Digite um numero")
+    console.log(funcao(num));
+
+    // função de linha
+
+    let add = (a, b) => a + b;
+    console.log(add(10, 20)); // -> 30
+
+}
