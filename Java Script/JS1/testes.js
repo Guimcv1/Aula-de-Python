@@ -1,39 +1,59 @@
-// CRUD
-/*
+let veiculos = [];
 
-Create
-read
-update
-delete
-
-*/
-{
 while(true){
-    var produtos =[]
-    var op = prompt("Selecione uma opção:\n1 | Criar produto\n2 | Listar produtos\n3 | Atualizar produtos\n4 | Deletar produtos")
-    op = Number(op)
-    switch (op){
-        case 1:
-            let prod_nome = prompt("Qual o nome do produto:")
-            let prod_quant = prompt("Qual a quantidade do produto:")
-            let prod_valor = prompt("Qual o valor do produto:")
-            let produto = {
-            produto_nome: prod_nome,
-            produto_quantidade: prod_quant,
-            produto_valor: prod_valor,
-            }
-            produtos.push(produto)
-            continue;
-        case 2:
-            for(let i of produtos){
-                console.log(`\n${50*"-"}\nProduto: ${i.produto_nome}\nQuantidade: ${i.produto_quantidade}\nValor: ${i.produto_valor}`)}
-            
-        case _:
+    op = prompt(`Sistema de gerenciamento de veiculos\n
+        1 | Adicionar veiculos
+        2 | Remover veiculos
+        3 | Listar veiculos`);
+    
+    if (op === "0" || op === null) break; // Encerra o programa
+
+    switch(Number(op)){
+        case 1: 
+            cliente = prompt("Qual o nome do cliente:");
+            placa = prompt("Qual a placa do veiculo:");
+            cor = prompt("Qual a cor do veiculo");
+            entrada = prompt("Qual é o horario de entrada")
+            vip = confirm("É vip:")
+            veiculo = {
+                placa: placa,
+                cor: cor,
+                entrada: entrada,
+                cliente: cliente,
+                vip: vip
+            };
+            veiculos.push(veiculo);
             break;
-            
+        case 2:
+            if (veiculos.length === 0) {
+                alert("Nenhum veiculo cadastrado");
+                break;}
+            hora = prompt("Que horas são:")
+            plac = prompt("Qual a placa do veiculo:")
+            let num = 0
+            for (i of veiculos){
+                num =+ num;
+                if (i.placa = plac){
+                    if(hora >= i.entarda + 3){
+                    
+                    console.log("Diaria")
+                    break;
+                }else if(hora >= i.entarda + 2){
+                    console.log("3")
 
-}}
+                }else if(hora >= i.entarda + 1){
+                    console.log("2")
+
+                }else if(hora >= i.entarda ){
+                    console.log("1")
+                }else{
+                    console.log("erro")
+                }
+        }}
+            alert(veiculos[0].placa == plac)
 
 
-
+    }
+   
 }
+
