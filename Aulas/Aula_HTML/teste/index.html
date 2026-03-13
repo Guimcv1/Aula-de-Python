@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição Representante</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        input, select, button { width: 100%; padding: 12px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc; font-size: 16px; }
+        button { background: #1a73e8; color: white; border: none; cursor: pointer; font-weight: bold; }
+        button:hover { background: #1557b0; }
+        .hidden { display: none; }
+        .bar-bg { background: #e0e0e0; height: 15px; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+        .bar-fill { background: #34a853; height: 100%; width: 0%; transition: width 0.8s ease; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div id="step-1">
+        <h2>🗳️ Votação de Sala</h2>
+        <input type="text" id="input-nome" placeholder="Seu nome completo">
+        <select id="input-voto">
+            <option value="">Selecione um Candidato</option>
+            <option value="Candidato A">Candidato A</option>
+            <option value="Candidato B">Candidato B</option>
+            <option value="Candidato C">Candidato C</option>
+        </select>
+        <button id="btn-votar" onclick="processarVoto()">Confirmar Voto</button>
+    </div>
+
+    <div id="step-2" class="hidden">
+        <h2 style="color: #34a853;">Voto Registrado!</h2>
+        <div id="rank"></div>
+        <hr>
+        <button onclick="voltarParaInicio()" style="background: #5f6368;">Novo Voto (Início)</button>
+        <button onclick="baixarRelatorio()" style="background: #202124;">Baixar Dados (.json)</button>
+    </div>
+</div>
+
+<script>
+    const API_URL = "SUA_URL_DO_SHEETDB_AQUI"; // COLE AQUI SUA URL DO SHEETDB
+
+    async function processarVoto() {
+        const nome = document.getElementById('input-nome').value.trim();
+        const voto = document.getElementById('input-voto').value;
+        const btn = document.getElementById('btn-votar');
+
+        if (!nome || !voto) return alert("Preencha todos os campos!");
+        
+        btn.disabled = true;
+        btn.innerText = "Enviando...";
+
+        try {
+            // Enviando para a Planilha via SheetDB
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ data: [{ nome: nome, voto: voto }] })
+            });
+
+            if (response.ok) {
+                mostrarResultados();
+            } else {
+                throw new Error();
+            }
+        } catch (error) {
+            alert("Erro ao salvar voto. Verifique sua conexão ou a URL da API.");
+            btn.disabled = false;
+            btn.innerText = "Confirmar Voto";
+        }
+    }
+
+    async function mostrarResultados() {
+        document.getElementById('step-1').classList.add('hidden');
+        document.getElementById('step-2').classList.remove('hidden');
+
+        const res = await fetch(API_URL);
+        const dados = await res.json();
+        window.todosVotos = dados; // Salva para o download
+
+        const total = dados.length;
+        const contagem = {};
+        dados.forEach(d => contagem[d.voto] = (contagem[d.voto] || 0) + 1);
+
+        let html = `<h4>Total: ${total} votos</h4>`;
+        for (let cand in contagem) {
+            let perc = ((contagem[cand] / total) * 100).toFixed(1);
+            html += `<div style="text-align:left">${cand}: ${contagem[cand]} (${perc}%)</div>
+                     <div class="bar-bg"><div class="bar-fill" style="width:${perc}%"></div></div>`;
+        }
+        document.getElementById('rank').innerHTML = html;
+    }
+
+    function voltarParaInicio() {
+        document.getElementById('input-nome').value = "";
+        document.getElementById('input-voto').selectedIndex = 0;
+        document.getElementById('btn-votar').disabled = false;
+        document.getElementById('btn-votar').innerText = "Confirmar Voto";
+        document.getElementById('step-1').classList.remove('hidden');
+        document.getElementById('step-2').classList.add('hidden');
+    }
+
+    function baixarRelatorio() {
+        if (!window.todosVotos) return;
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(window.todosVotos, null, 2));
+        const link = document.createElement('a');
+        link.setAttribute("href", dataStr);
+        link.setAttribute("download", "eleicao_sala.json");
+        link.click();
+    }
+</script>
+
+</body>
+</html>
